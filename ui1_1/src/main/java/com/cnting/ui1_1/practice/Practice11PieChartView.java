@@ -77,9 +77,8 @@ public class Practice11PieChartView extends View {
             int startDegree = 0;
             int index = 0;
             for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                paint.setColor(colors[index]);
                 int degree = 360 * entry.getValue() / 100;
-                Pie pie = new Pie(startDegree, degree, rectF, entry.getKey());
+                Pie pie = new Pie(startDegree, degree, rectF, entry.getKey(), colors[index]);
                 //画扇形
                 pie.drawArc(canvas);
                 //画线
@@ -90,8 +89,9 @@ public class Practice11PieChartView extends View {
                 index++;
             }
         } else {
-
-
+            for (Pie pie : list) {
+                pie.draw(canvas);
+            }
         }
     }
 
@@ -100,19 +100,39 @@ public class Practice11PieChartView extends View {
         int degree;
         RectF rectF;
         String text;
+        int color;
+        boolean isClick = false;
 
-        public Pie(int startDegree, int degree, RectF rectF, String text) {
+        Pie(int startDegree, int degree, RectF rectF, String text, int color) {
             this.startDegree = startDegree;
             this.degree = degree;
             this.rectF = rectF;
             this.text = text;
+            this.color = color;
         }
 
-        public void drawArc(Canvas canvas) {
+        void draw(Canvas canvas) {
+            if (isClick) {
+                double centerDegree = (startDegree + degree / 2) * Math.PI / 180;
+                float translateX = (float) (50 * Math.cos(centerDegree));
+                float translateY = (float) (50 * Math.sin(centerDegree));
+                canvas.save();
+                canvas.translate(translateX, translateY);
+                drawArc(canvas);
+                drawLineAndText(canvas);
+                canvas.restore();
+            } else {
+                drawArc(canvas);
+                drawLineAndText(canvas);
+            }
+        }
+
+        private void drawArc(Canvas canvas) {
+            paint.setColor(color);
             canvas.drawArc(rectF, startDegree + gap, degree - gap, true, paint);
         }
 
-        public void drawLineAndText(Canvas canvas) {
+        private void drawLineAndText(Canvas canvas) {
             double centerDegree = (startDegree + degree / 2) * Math.PI / 180;
             float lineXStart = (float) (getWidth() / 2 + pieRadius * Math.cos(centerDegree));
             float lineYStart = (float) (getHeight() / 2 + pieRadius * Math.sin(centerDegree));
@@ -136,11 +156,8 @@ public class Practice11PieChartView extends View {
                 canvas.drawText(text, lineXEnd - 70 - textWidth, lineYEnd + 15, textPaint);
             }
         }
-
-        public void clickPie() {
-            
-        }
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -155,11 +172,9 @@ public class Practice11PieChartView extends View {
                     degree = degree + 360;
                 }
                 for (Pie pie : list) {
-                    if (degree >= pie.startDegree && degree <= (pie.startDegree + pie.degree)) {
-                        pie.clickPie();
-                        break;
-                    }
+                    pie.isClick = degree >= pie.startDegree && degree <= (pie.startDegree + pie.degree);
                 }
+                invalidate();
                 return true;
             } else {
                 return super.onTouchEvent(event);
