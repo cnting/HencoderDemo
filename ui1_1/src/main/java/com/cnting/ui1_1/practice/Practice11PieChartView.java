@@ -159,14 +159,16 @@ public class Practice11PieChartView extends View {
     }
 
 
+    float touchX, touchY;
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            float x = event.getX();
-            float y = event.getY();
-            double zSqure = Math.pow(Math.abs(getWidth() / 2 - x), 2) + Math.pow(Math.abs(getHeight() / 2 - y), 2);   //最长边的平方
+            touchX = event.getX();
+            touchY = event.getY();
+            double zSqure = Math.pow(Math.abs(getWidth() / 2 - touchX), 2) + Math.pow(Math.abs(getHeight() / 2 - touchY), 2);   //最长边的平方
             if (zSqure < Math.pow(pieRadius, 2)) {//在圆内
-                double radian = Math.atan2(y - getHeight() / 2, x - getWidth() / 2);   //弧度
+                double radian = Math.atan2(touchY - getHeight() / 2, touchX - getWidth() / 2);   //弧度
                 double degree = radian * 180 / Math.PI;
                 if (degree < 0) {
                     degree = degree + 360;
@@ -175,11 +177,14 @@ public class Practice11PieChartView extends View {
                     pie.isClick = degree >= pie.startDegree && degree <= (pie.startDegree + pie.degree);
                 }
                 invalidate();
-                return true;
-            } else {
-                return super.onTouchEvent(event);
+//                return true;
             }
         }
+//        else if (event.getAction() == MotionEvent.ACTION_MOVE) {   TODO 根据手势旋转饼图
+//            float translateY = event.getY() - touchY;
+//            Log.d("移动", "translateY:" + translateY);
+//            setRotation(translateY);
+//        }
         return super.onTouchEvent(event);
     }
 }
