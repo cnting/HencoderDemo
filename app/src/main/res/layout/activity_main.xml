@@ -9,19 +9,38 @@
 
     <Button
             android:id="@+id/ui1_1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="UI_1_1"
+            android:text="1.绘制基础"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
             android:id="@+id/ui1_2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="UI_1_2"
+            android:text="2.Paint详解"
+            android:layout_marginTop="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ui1_1"
+    />
+    <Button
+            android:id="@+id/ui1_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.文字的绘制"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ui1_2"
+    />
+    <Button
+            android:id="@+id/ui1_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4.Canvas剪裁和变换"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ui1_3"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

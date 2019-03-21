@@ -33,7 +33,8 @@ public class Practice6DrawLineView extends View {
 
         paint.setStrokeWidth(30);
         paint.setColor(Color.BLACK);
-        canvas.drawLine(0, 0, 500, 500, paint);
+//        canvas.drawLine(0, 0, 500, 500, paint);
+        canvas.drawLine(0, 0, 500, 0, paint);
 
         paint.setColor(Color.BLUE);
         canvas.drawLines(points, paint);
