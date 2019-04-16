@@ -13,9 +13,14 @@
             <option value="$PROJECT_DIR$/ui1_2" />
             <option value="$PROJECT_DIR$/ui1_3" />
             <option value="$PROJECT_DIR$/ui1_4" />
+            <option value="$PROJECT_DIR$/ui1_5" />
+            <option value="$PROJECT_DIR$/ui1_6" />
+            <option value="$PROJECT_DIR$/ui1_7" />
+            <option value="$PROJECT_DIR$/ui2_1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

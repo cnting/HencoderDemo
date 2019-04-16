@@ -37,4 +37,8 @@ dependencies {
     implementation project(":ui1_2")
     implementation project(":ui1_3")
     implementation project(":ui1_4")
+    implementation project(":ui1_5")
+    implementation project(":ui1_6")
+    implementation project(":ui1_7")
+    implementation project(":ui2_1")
 }

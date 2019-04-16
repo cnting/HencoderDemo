@@ -86,4 +86,9 @@ public class Practice14FlipboardView extends View {
 
         canvas.restore();
     }
+
+    @Override
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+    }
 }
