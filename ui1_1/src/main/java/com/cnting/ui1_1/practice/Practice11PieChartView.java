@@ -113,7 +113,8 @@ public class Practice11PieChartView extends View {
 
         void draw(Canvas canvas) {
             if (isClick) {
-                double centerDegree = (startDegree + degree / 2) * Math.PI / 180;
+//                double centerDegree = (startDegree + degree / 2) * Math.PI / 180;
+                double centerDegree = Math.toRadians(startDegree + degree / 2);  //Math.toRadians()将角度转弧度
                 float translateX = (float) (50 * Math.cos(centerDegree));
                 float translateY = (float) (50 * Math.sin(centerDegree));
                 canvas.save();

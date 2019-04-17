@@ -63,6 +63,7 @@ public class Practice12PathEffectView extends View {
 
         canvas.save();
         canvas.translate(500, 200);
+        //通过这个方式可以在沿着线画东西，比如仪表盘的刻度
         // 第四处：PathDashPathEffect
         Path dashPath = new Path();
         dashPath.rLineTo(10, 0);

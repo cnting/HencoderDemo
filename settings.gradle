@@ -1,2 +1,2 @@
-include ':app', ':ui1_1', ':ui1_2', ':ui1_3', ':ui1_4', ':ui1_5', ':ui1_6', ':ui1_7', ':ui2_1'
+include ':app', ':ui1_1', ':ui1_2', ':ui1_3', ':ui1_4', ':ui1_5', ':ui1_6', ':ui1_7', ':ui2_1', ':ui2_2'
 rootProject.name='HencoderDemo'
