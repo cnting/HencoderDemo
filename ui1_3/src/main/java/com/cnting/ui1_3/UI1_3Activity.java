@@ -32,7 +32,8 @@ public class UI1_3Activity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.sample_get_font_spacing, R.string.title_get_font_spacing, R.layout.practice_get_font_spacing));
         pageModels.add(new PageModel(R.layout.sample_measure_text, R.string.title_measure_text, R.layout.practice_measure_text));
         pageModels.add(new PageModel(R.layout.sample_get_text_bounds, R.string.title_get_text_bounds, R.layout.practice_get_text_bounds));
-        pageModels.add(new PageModel(R.layout.sample_get_font_metrics, R.string.title_get_font_metrics, R.layout.practice_get_font_metrics));
+        pageModels.add(new PageModel(R.layout.sample_15, R.string.title_15, R.layout.practice_15));
+        pageModels.add(new PageModel(R.layout.sample_16, R.string.title_16, R.layout.practice_16));
     }
 
     @Override
@@ -74,7 +75,8 @@ public class UI1_3Activity extends AppCompatActivity {
         int sampleLayoutRes;
         @StringRes
         int titleRes;
-        @LayoutRes int practiceLayoutRes;
+        @LayoutRes
+        int practiceLayoutRes;
 
         PageModel(@LayoutRes int sampleLayoutRes, @StringRes int titleRes, @LayoutRes int practiceLayoutRes) {
             this.sampleLayoutRes = sampleLayoutRes;
