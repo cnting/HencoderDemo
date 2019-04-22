@@ -2,6 +2,7 @@ package com.cnting.ui2_2.views
 
 import android.animation.*
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -42,6 +43,7 @@ class FlipboardView : View {
 
     init {
         bitmap = BitmapFactory.decodeResource(resources, R.mipmap.flipboard_logo)
+//        camera.setLocation(0f, 0f, -8f * Resources.getSystem().displayMetrics.densityDpi)
     }
 
 

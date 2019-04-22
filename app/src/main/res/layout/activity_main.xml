@@ -73,10 +73,10 @@
             android:id="@+id/ui2_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1.onMeasure"
+            android:text="1.布局"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ui1_6"
+            app:layout_constraintTop_toBottomOf="@id/ui1_7"
     />
     <Button
             android:id="@+id/ui2_2"
