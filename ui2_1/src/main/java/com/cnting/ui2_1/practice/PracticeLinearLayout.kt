@@ -37,7 +37,7 @@ class PracticeLinearLayout : ViewGroup {
             measureChild(child, widthMeasureSpec, heightMeasureSpec)
             useHeight += (child.measuredHeight + child.marginTop + child.marginBottom)
             useWidth = Math.max(useWidth, child.measuredWidth + child.marginLeft + child.marginRight)
-            Log.d("measureChild", "====>$it,height:${child.measuredHeight},useHeight:$useHeight")
+//            Log.d("measureChild", "====>$it,height:${child.measuredHeight},useHeight:$useHeight")
         }
 
         if (widthMode == MeasureSpec.AT_MOST) {
@@ -46,7 +46,7 @@ class PracticeLinearLayout : ViewGroup {
         if (heightMode == MeasureSpec.AT_MOST) {
             heightSize = useHeight
         }
-        Log.i("measure", "===>widthSize:$widthSize,heightSize:$heightSize")
+//        Log.i("measure", "===>widthSize:$widthSize,heightSize:$heightSize")
 
         setMeasuredDimension(widthSize, heightSize)
     }
@@ -98,7 +98,7 @@ class PracticeLinearLayout : ViewGroup {
                 useHeight + child.marginTop + child.measuredHeight
             )
             useHeight += (child.measuredHeight + child.marginTop)
-            Log.i("useHeight", "===>useHeight:$useHeight,child.marginTop:${child.marginTop}")
+//            Log.i("useHeight", "===>useHeight:$useHeight,child.marginTop:${child.marginTop}")
         }
 
     }

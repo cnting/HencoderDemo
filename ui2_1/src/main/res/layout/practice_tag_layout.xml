@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cnting.ui2_1.practice.PracticeTagLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+    <com.cnting.ui2_1.practice.ColorTextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                             android:padding="4dp"
+                                             android:layout_margin="4dp"/>
+</com.cnting.ui2_1.practice.PracticeTagLayout>

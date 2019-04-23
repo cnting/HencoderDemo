@@ -31,6 +31,7 @@ public class UI1_1Activity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.ui_1_1_sample_histogram, R.string.title_draw_histogram, R.layout.ui_1_1_practice_histogram));
         pageModels.add(new PageModel(R.layout.ui_1_1_sample_pie_chart, R.string.title_draw_pie_chart, R.layout.ui_1_1_practice_pie_chart));
         pageModels.add(new PageModel(R.layout.ui_1_1_sample_dashboard, R.string.title_draw_dashboard, R.layout.ui_1_1_practice_dashboard));
+        pageModels.add(new PageModel(R.layout.ui_1_1_sample_dashboard, R.string.title_bitmap, R.layout.ui_1_1_practice_bitmap));
     }
 
     @Override

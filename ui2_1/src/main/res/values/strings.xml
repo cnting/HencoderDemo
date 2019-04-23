@@ -4,6 +4,7 @@
     <string name="title_custom_viewgroup">自定义ViewGroup</string>
     <string name="title_custom_drawable">自定义Drawable</string>
     <string name="title_material_edittext">MaterialEditText</string>
+    <string name="title_tag_layout">TagLayout</string>
     <string name="title_message_edit_text">MessageEditText</string>
     <string name="title_property_values_holder">PropertyValuesHolder</string>
     <string name="width">宽度</string>
