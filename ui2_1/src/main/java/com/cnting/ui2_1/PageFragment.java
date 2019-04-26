@@ -1,18 +1,21 @@
 package com.cnting.ui2_1;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewStub;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class PageFragment extends Fragment {
+    //    @LayoutRes
+//    int sampleLayoutRes;
     @LayoutRes
-    int sampleLayoutRes;
-    @LayoutRes int practiceLayoutRes;
+    int practiceLayoutRes;
 
     public static PageFragment newInstance(@LayoutRes int sampleLayoutRes, @LayoutRes int practiceLayoutRes) {
         PageFragment fragment = new PageFragment();
@@ -26,16 +29,8 @@ public class PageFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_page, container, false);
-
-        ViewStub sampleStub = view.findViewById(R.id.sampleStub);
-        sampleStub.setLayoutResource(sampleLayoutRes);
-        sampleStub.inflate();
-
-        ViewStub practiceStub = view.findViewById(R.id.practiceStub);
-        practiceStub.setLayoutResource(practiceLayoutRes);
-        practiceStub.inflate();
-
+        FrameLayout view = (FrameLayout) inflater.inflate(R.layout.fragment_page2, container, false);
+        inflater.inflate(practiceLayoutRes, view, true);
         return view;
     }
 
@@ -44,7 +39,7 @@ public class PageFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
-            sampleLayoutRes = args.getInt("sampleLayoutRes");
+//            sampleLayoutRes = args.getInt("sampleLayoutRes");
             practiceLayoutRes = args.getInt("practiceLayoutRes");
         }
     }

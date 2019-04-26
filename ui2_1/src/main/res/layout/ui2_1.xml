@@ -17,7 +17,7 @@
             app:tabTextColor="@android:color/black"
             app:tabMode="scrollable"/>
 
-    <androidx.viewpager.widget.ViewPager
+    <com.cnting.ui2_1.NoSwipeableViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
