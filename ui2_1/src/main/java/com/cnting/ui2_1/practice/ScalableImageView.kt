@@ -79,7 +79,6 @@ class ScalableImageView : View {
         super.onDraw(canvas)
         val scaleFraction = (scale - smallScale) / (bigScale - smallScale)
         canvas.translate(offsetX * scaleFraction, offsetY * scaleFraction)
-        Log.v("===>", "onDraw(),scale:$scale")
         canvas.scale(scale, scale, width / 2f, height / 2f)
         canvas.drawBitmap(bitmap!!, originOffsetX, originOffsetY, paint)
     }
@@ -116,26 +115,22 @@ class ScalableImageView : View {
         }
 
         override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
-            if (isBig) {
-                overScroller?.fling(
-                    offsetX.toInt(), offsetY.toInt(), velocityX.toInt(), velocityY.toInt(),
-                    (-(bitmap!!.width * bigScale - width) / 2).toInt(),
-                    ((bitmap!!.width * bigScale - width) / 2).toInt(),
-                    (-(bitmap!!.height * bigScale - height) / 2).toInt(),
-                    ((bitmap!!.height * bigScale - height) / 2).toInt()
-                )
-                ViewCompat.postOnAnimation(this@ScalableImageView, flingRunnable)
-            }
+            overScroller?.fling(
+                offsetX.toInt(), offsetY.toInt(), velocityX.toInt(), velocityY.toInt(),
+                (-(bitmap!!.width * bigScale - width) / 2).toInt(),
+                ((bitmap!!.width * bigScale - width) / 2).toInt(),
+                (-(bitmap!!.height * bigScale - height) / 2).toInt(),
+                ((bitmap!!.height * bigScale - height) / 2).toInt()
+            )
+            ViewCompat.postOnAnimation(this@ScalableImageView, flingRunnable)
             return false
         }
 
         override fun onScroll(down: MotionEvent?, event: MotionEvent?, distanceX: Float, distanceY: Float): Boolean {
-            if (isBig) {
-                offsetX -= distanceX
-                offsetY -= distanceY
-                fixOffset()
-                invalidate()
-            }
+            offsetX -= distanceX
+            offsetY -= distanceY
+            fixOffset()
+            invalidate()
             return false
         }
 
@@ -148,8 +143,8 @@ class ScalableImageView : View {
             } else scale < bigScale
 
             if (isBig) {
-                offsetX = (e.x - width.toFloat() / 2) - (e.x - width.toFloat() / 2) * (bigScale / smallScale)
-                offsetY = (e.y - height.toFloat() / 2) - (e.y - height.toFloat() / 2) * (bigScale / smallScale)
+                offsetX = (e.x - width.toFloat() / 2) - (e.x - width.toFloat() / 2) * (bigScale / scale)
+                offsetY = (e.y - height.toFloat() / 2) - (e.y - height.toFloat() / 2) * (bigScale / scale)
                 fixOffset()
                 animator.setFloatValues(scale, bigScale)
                 animator.start()
