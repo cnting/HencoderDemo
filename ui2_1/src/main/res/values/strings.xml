@@ -6,6 +6,9 @@
     <string name="title_material_edittext">MaterialEditText</string>
     <string name="title_tag_layout">TagLayout</string>
     <string name="title_scale_image">ScalableImageView</string>
+    <string name="title_multi_touch_1">多点触摸-传递</string>
+    <string name="title_multi_touch_2">多点触摸-协作</string>
+    <string name="title_multi_touch_3">多点触摸-互不干扰</string>
     <string name="title_message_edit_text">MessageEditText</string>
     <string name="title_property_values_holder">PropertyValuesHolder</string>
     <string name="width">宽度</string>

@@ -122,7 +122,7 @@ class ScalableImageView : View {
                 (-(bitmap!!.height * bigScale - height) / 2).toInt(),
                 ((bitmap!!.height * bigScale - height) / 2).toInt()
             )
-            ViewCompat.postOnAnimation(this@ScalableImageView, flingRunnable)
+            ViewCompat.postInvalidateOnAnimation(this@ScalableImageView)
             return false
         }
 
@@ -181,15 +181,16 @@ class ScalableImageView : View {
 
     }
 
-    val flingRunnable = object : Runnable {
-        override fun run() {
-            if (overScroller?.computeScrollOffset() == true) {   //滚动还未结束
-                offsetX = overScroller!!.currX.toFloat()
-                offsetY = overScroller!!.currY.toFloat()
-                fixOffset()
-                invalidate()
-                ViewCompat.postOnAnimation(this@ScalableImageView, this)
-            }
+    /**
+     * invalidate会调用onDraw(),onDraw()会自动调用这个方法
+     */
+    override fun computeScroll() {
+        super.computeScroll()
+        if (overScroller?.computeScrollOffset() == true) {   //滚动还未结束
+            offsetX = overScroller!!.currX.toFloat()
+            offsetY = overScroller!!.currY.toFloat()
+            fixOffset()
+            ViewCompat.postInvalidateOnAnimation(this)
         }
     }
 }

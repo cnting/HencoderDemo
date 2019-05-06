@@ -7,7 +7,6 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -25,6 +24,9 @@ public class UI2_1Activity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_material_edittext, R.layout.practice_material_edittext));
         pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_tag_layout, R.layout.practice_tag_layout));
         pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_scale_image, R.layout.practice_scalable_image_view));
+        pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_multi_touch_1, R.layout.practice_multi_touch_1));
+        pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_multi_touch_2, R.layout.practice_multi_touch_2));
+        pageModels.add(new PageModel(R.layout.sample_viewgroup, R.string.title_multi_touch_3, R.layout.practice_multi_touch_3));
     }
 
     @Override
