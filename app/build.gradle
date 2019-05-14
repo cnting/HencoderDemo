@@ -42,4 +42,6 @@ dependencies {
     implementation project(":ui1_7")
     implementation project(":ui2_1")
     implementation project(":ui2_2")
+    implementation project(":ui2_3")
+    implementation project(":ui2_4")
 }

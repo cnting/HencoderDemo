@@ -12,6 +12,8 @@ import com.cnting.ui1_6.UI1_6Activity
 import com.cnting.ui1_7.UI1_7Activity
 import com.cnting.ui2_1.UI2_1Activity
 import com.cnting.ui2_2.UI2_2Activity
+import com.cnting.ui2_3.UI2_3Activity
+import com.cnting.ui2_4.UI2_4Activity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,5 +30,7 @@ class MainActivity : AppCompatActivity() {
         ui1_7.setOnClickListener { startActivity(Intent(this@MainActivity, UI1_7Activity::class.java)) }
         ui2_1.setOnClickListener { startActivity(Intent(this@MainActivity, UI2_1Activity::class.java)) }
         ui2_2.setOnClickListener { startActivity(Intent(this@MainActivity, UI2_2Activity::class.java)) }
+        ui2_3.setOnClickListener { startActivity(Intent(this@MainActivity, UI2_3Activity::class.java)) }
+        ui2_4.setOnClickListener { startActivity(Intent(this@MainActivity, UI2_4Activity::class.java)) }
     }
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cnting.ui2_4.views.DropCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:orientation="vertical"
+                                     android:layout_width="match_parent"
+                                     android:layout_gravity="center"
+                                     android:layout_height="match_parent">
+    android:layout_height="match_parent">
+    <View android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center"
+          android:background="@android:color/holo_orange_dark"
+          android:contentDescription="1 橙"
+    />
+
+    <View android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center"
+          android:background="@android:color/holo_red_dark"
+          android:contentDescription="2 红"
+    />
+
+    <View android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center"
+          android:background="@android:color/holo_purple"
+          android:contentDescription="3 紫"
+    />
+
+    <View android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center"
+          android:background="@android:color/holo_green_dark"
+          android:contentDescription="4 绿"
+    />
+
+    <View android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center"
+          android:background="@android:color/holo_blue_dark"
+          android:contentDescription="5 蓝"
+    />
+
+    <View android:layout_width="200dp"
+          android:layout_gravity="center"
+          android:layout_height="200dp"
+          android:background="@android:color/darker_gray"
+          android:contentDescription="6 灰"
+    />
+</com.cnting.ui2_4.views.DropCardView>

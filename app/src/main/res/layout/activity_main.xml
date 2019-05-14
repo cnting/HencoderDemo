@@ -87,5 +87,23 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ui2_1"
     />
+    <Button
+            android:id="@+id/ui2_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.仿写ViewPager"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ui2_2"
+    />
+    <Button
+            android:id="@+id/ui2_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4.拖拽"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ui2_3"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
