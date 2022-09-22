@@ -31,26 +31,30 @@ class ScalableImageView : View {
         init()
     }
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
-    val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    var bitmap: Bitmap? = null
-    var originOffsetX = 0f
-    var originOffsetY = 0f
-    var offsetX = 0f
-    var offsetY = 0f
-    var smallScale = 1f
-    var bigScale = 1f
-    val overScale = 2.5f
-    var isBig = false
-    var gestureDetectorCompat: GestureDetectorCompat? = null
-    var scaleGestureDetector: ScaleGestureDetector? = null
-    var overScroller: OverScroller? = null
+    private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    private var bitmap: Bitmap? = null
+    private var originOffsetX = 0f
+    private var originOffsetY = 0f
+    private var offsetX = 0f
+    private var offsetY = 0f
+    private var smallScale = 1f
+    private var bigScale = 1f
+    private val overScale = 2.5f
+    private var isBig = false
+    private var gestureDetectorCompat: GestureDetectorCompat? = null
+    private var scaleGestureDetector: ScaleGestureDetector? = null
+    private var overScroller: OverScroller? = null
     var scale = 0f
         set(value) {
-            field = value
+            field = fixScale(value)
             invalidate()
         }
 
@@ -77,6 +81,7 @@ class ScalableImageView : View {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        //缩放时只改了scale，offset 也需要根据缩放比例修改
         val scaleFraction = (scale - smallScale) / (bigScale - smallScale)
         canvas.translate(offsetX * scaleFraction, offsetY * scaleFraction)
         canvas.scale(scale, scale, width / 2f, height / 2f)
@@ -102,6 +107,10 @@ class ScalableImageView : View {
         offsetY = Math.max(offsetY, -(bitmap!!.height * bigScale - height) / 2)
     }
 
+    private fun fixScale(scale: Float): Float {
+        return scale.coerceAtLeast(smallScale).coerceAtMost(bigScale)
+    }
+
     private val gestureListener = object : GestureDetector.SimpleOnGestureListener() {
         override fun onShowPress(e: MotionEvent?) {
         }
@@ -114,23 +123,39 @@ class ScalableImageView : View {
             return true
         }
 
-        override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
-            overScroller?.fling(
-                offsetX.toInt(), offsetY.toInt(), velocityX.toInt(), velocityY.toInt(),
-                (-(bitmap!!.width * bigScale - width) / 2).toInt(),
-                ((bitmap!!.width * bigScale - width) / 2).toInt(),
-                (-(bitmap!!.height * bigScale - height) / 2).toInt(),
-                ((bitmap!!.height * bigScale - height) / 2).toInt()
-            )
-            ViewCompat.postInvalidateOnAnimation(this@ScalableImageView)
+        //这个方法只会在松手一瞬间调用一次
+        override fun onFling(
+            e1: MotionEvent?,
+            e2: MotionEvent?,
+            velocityX: Float,
+            velocityY: Float
+        ): Boolean {
+            if (isBig) {
+                overScroller?.fling(
+                    offsetX.toInt(), offsetY.toInt(), velocityX.toInt(), velocityY.toInt(),
+                    (-(bitmap!!.width * bigScale - width) / 2).toInt(),
+                    ((bitmap!!.width * bigScale - width) / 2).toInt(),
+                    (-(bitmap!!.height * bigScale - height) / 2).toInt(),
+                    ((bitmap!!.height * bigScale - height) / 2).toInt()
+                )
+                ViewCompat.postInvalidateOnAnimation(this@ScalableImageView)
+            }
             return false
         }
 
-        override fun onScroll(down: MotionEvent?, event: MotionEvent?, distanceX: Float, distanceY: Float): Boolean {
-            offsetX -= distanceX
-            offsetY -= distanceY
-            fixOffset()
-            invalidate()
+        override fun onScroll(
+            down: MotionEvent?,
+            event: MotionEvent?,
+            distanceX: Float,
+            distanceY: Float
+        ): Boolean {
+            if (isBig) {
+                //distance是 上一个点-当前点，比如从 左下方 移到 右上方，distanceX为负，distanceY为正。所以是减
+                offsetX -= distanceX
+                offsetY -= distanceY
+                fixOffset()
+                invalidate()
+            }
             return false
         }
 
@@ -143,8 +168,14 @@ class ScalableImageView : View {
             } else scale < bigScale
 
             if (isBig) {
-                offsetX = (e.x - width.toFloat() / 2) - (e.x - width.toFloat() / 2) * (bigScale / scale)
-                offsetY = (e.y - height.toFloat() / 2) - (e.y - height.toFloat() / 2) * (bigScale / scale)
+                //希望双击的点的位置不要变
+                //(e.x - width.toFloat() / 2) 表示距离中心点的偏移x
+                //缩放后的偏移x1 = x * (bigScale / scale)
+                //如果是放大，点击的位置会往右上方偏移，所以需要把这个偏移值 减 回来，让它再偏移回原来的位置
+                offsetX =
+                    (e.x - width.toFloat() / 2) - (e.x - width.toFloat() / 2) * (bigScale / scale)
+                offsetY =
+                    (e.y - height.toFloat() / 2) - (e.y - height.toFloat() / 2) * (bigScale / scale)
                 fixOffset()
                 animator.setFloatValues(scale, bigScale)
                 animator.start()
