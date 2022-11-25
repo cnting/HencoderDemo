@@ -43,8 +43,8 @@ public class Practice12CameraRotateFixedView extends View {
         camera.rotateX(30);
         camera.applyToCanvas(canvas);
         canvas.translate(-centerX, -centerY);   //旋转之前把中间点移到旋转的轴心（轴心是原点，且没法移动）
-        camera.restore();
         canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
+        camera.restore();
         canvas.restore();
 
         centerX = point2.x + bitmap.getWidth() / 2;
