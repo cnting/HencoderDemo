@@ -1,6 +1,9 @@
 package com.cnting.ui2_4.views
 
+import android.content.ClipData
 import android.content.Context
+import android.graphics.Canvas
+import android.graphics.Path
 import android.os.Build
 import android.util.AttributeSet
 import android.util.Log
@@ -91,22 +94,20 @@ class DragListenerSortView : ViewGroup {
     private val viewDragListener = OnDragListener { v, event ->
         when (event.action) {
             DragEvent.ACTION_DRAG_STARTED -> {  //每个view都会调用
-//                Log.d("start", "===>view:${v.contentDescription}")
                 if (event.localState == v) {
                     v.visibility = View.INVISIBLE
                 }
             }
-            DragEvent.ACTION_DRAG_ENTERED -> {  //进入到某个view的区域
-//                Log.i("enter", "===>view:${v.contentDescription}")
+            DragEvent.ACTION_DRAG_ENTERED -> {  //进入到某个view的区域，该view调用
                 if (event.localState != v) {
                     sortChild2(v)
                 }
             }
             DragEvent.ACTION_DRAG_LOCATION -> {
             }
-            DragEvent.ACTION_DRAG_EXITED -> {
+            DragEvent.ACTION_DRAG_EXITED -> {  //退出某个view的区域，该view调用
             }
-            DragEvent.ACTION_DROP -> {    //在某个view里释放
+            DragEvent.ACTION_DROP -> {    //在某个view里释放，该view调用
             }
             DragEvent.ACTION_DRAG_ENDED -> {  //每个view都会调用
                 v.visibility = View.VISIBLE
