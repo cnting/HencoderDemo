@@ -20,12 +20,19 @@ class FlipboardView : View {
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
 
-    var bitmap: Bitmap? = null
+    var bitmap: Bitmap
+    var bitmapWidth = 0f
+    var bitmapHeight = 0f
     val paint = Paint()
     val camera = Camera()
-    var degree: Int = 90
+    val animatorSet = AnimatorSet()
+    var degree: Float = 0f
         set(value) {
             field = value
             invalidate()
@@ -35,7 +42,7 @@ class FlipboardView : View {
             field = value
             invalidate()
         }
-    private var bottomCameraRotate = 0f
+    private var rightCameraRotate = 0f
         set(value) {
             field = value
             invalidate()
@@ -43,72 +50,70 @@ class FlipboardView : View {
 
     init {
         bitmap = BitmapFactory.decodeResource(resources, R.mipmap.flipboard_logo)
+        bitmapWidth = bitmap.width.toFloat()
+        bitmapHeight = bitmap.height.toFloat()
 //        camera.setLocation(0f, 0f, -8f * Resources.getSystem().displayMetrics.densityDpi)
+
+        val animator0 = ObjectAnimator.ofFloat(this, "rightCameraRotate", 0f, -40f)
+        animator0.duration = 500
+
+        val animator2 = ObjectAnimator.ofFloat(this, "degree", 0f, 270f)
+        animator2.duration = 2000
+        animator2.interpolator = AccelerateDecelerateInterpolator()
+
+        val animator3 = ObjectAnimator.ofFloat(this, "topCameraRotate", 0f, -40f)
+        animator3.duration = 500
+
+        animatorSet.playSequentially(animator0, animator2, animator3)
     }
 
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        val bitmapX = (width / 2 - bitmap!!.width / 2).toFloat()
-        val bitmapY = (height / 2 - bitmap!!.height / 2).toFloat()
+        val bitmapX = (width / 2 - bitmapWidth / 2)
+        val bitmapY = (height / 2 - bitmapHeight / 2)
 
+        //不变换的一半
         canvas.save()
         camera.save()
         canvas.translate(width / 2f, height / 2f)
-        canvas.rotate(-degree.toFloat())
-        camera.rotateX(topCameraRotate)
+        canvas.rotate(-degree)
+        camera.rotateY(-topCameraRotate) //这是最后一步，此时canvas已经旋转了270，所以是沿着y轴（没理解的话把x、y坐标系箭头标出来就知道了）
         camera.applyToCanvas(canvas)
-        canvas.clipRect(-(bitmap!!.width).toFloat(), -bitmap!!.height.toFloat(), (bitmap!!.width).toFloat(), 0f)
-        canvas.rotate(degree.toFloat())
+        canvas.clipRect(-bitmapWidth, -bitmapHeight, 0f, bitmapHeight)
+        canvas.rotate(degree)
         canvas.translate(-width / 2f, -height / 2f)
-        canvas.drawBitmap(
-            bitmap!!,
-            bitmapX,
-            bitmapY,
-            paint
-        )
+        canvas.drawBitmap(bitmap, bitmapX, bitmapY, paint)
         camera.restore()
         canvas.restore()
 
+        //变换的一半
         canvas.save()
         camera.save()
         canvas.translate(width / 2f, height / 2f)
-        canvas.rotate(-degree.toFloat())
-        camera.rotateX(bottomCameraRotate)
+        canvas.rotate(-degree)
+        camera.rotateY(rightCameraRotate)
         camera.applyToCanvas(canvas)
-        canvas.clipRect(-(bitmap!!.width).toFloat(), 0f, (bitmap!!.width).toFloat(), (bitmap!!.height).toFloat())
-        canvas.rotate(degree.toFloat())
+        canvas.clipRect(0f, -bitmapHeight, bitmapWidth, bitmapHeight)
+        canvas.rotate(degree)
         canvas.translate(-width / 2f, -height / 2f)
-        canvas.drawBitmap(
-            bitmap!!,
-            bitmapX,
-            bitmapY,
-            paint
-        )
+        canvas.drawBitmap(bitmap, bitmapX, bitmapY, paint)
         camera.restore()
         canvas.restore()
     }
 
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        setOnClickListener {
+            topCameraRotate = 0f
+            rightCameraRotate = 0f
+            degree = 0f
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        topCameraRotate = 0f
-        bottomCameraRotate = 0f
-        val animator1 = ObjectAnimator.ofFloat(this, "bottomCameraRotate", 0f, 40f)
-        animator1.duration = 300
-
-        val animator2 = ObjectAnimator.ofInt(this, "degree", 90, 360)
-        animator2.duration = 2000
-        animator2.interpolator = AccelerateDecelerateInterpolator()
-
-        val animator3 = ObjectAnimator.ofFloat(this, "topCameraRotate", 0f, -40f)
-        animator3.duration = 300
-
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2, animator3)
-        animatorSet.start()
-
-        return super.onTouchEvent(event)
+            postDelayed({
+                animatorSet.start()
+            }, 500)
+        }
     }
 
 }

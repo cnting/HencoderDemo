@@ -2,9 +2,12 @@ package com.cnting.ui1_4.practice;
 
 import android.content.Context;
 import android.graphics.*;
+
 import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.cnting.ui1_4.R;
 
 public class Practice05RotateView extends View {
@@ -49,5 +52,6 @@ public class Practice05RotateView extends View {
         canvas.scale(0.5f, 0.5f, point2.x + bitmap.getWidth() / 2, point2.y + bitmap.getHeight() / 2);
         canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
         canvas.restore();
+
     }
 }

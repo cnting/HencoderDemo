@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -134,7 +135,7 @@ public class Practice11PieChartView extends View {
         }
 
         private void drawLineAndText(Canvas canvas) {
-            double centerDegree = (startDegree + degree / 2) * Math.PI / 180;
+            double centerDegree = Math.toRadians(startDegree + degree / 2);
             float lineXStart = (float) (getWidth() / 2 + pieRadius * Math.cos(centerDegree));
             float lineYStart = (float) (getHeight() / 2 + pieRadius * Math.sin(centerDegree));
             float lineXEnd = (float) (getWidth() / 2 + (pieRadius + 20) * Math.cos(centerDegree));
