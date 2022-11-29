@@ -10,6 +10,7 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.widget.EditText
+import androidx.appcompat.widget.AppCompatEditText
 import com.cnting.ui2_1.R
 import com.cnting.ui2_1.Utils
 
@@ -17,7 +18,7 @@ import com.cnting.ui2_1.Utils
  * Created by cnting on 2019-04-22
  *
  */
-class PracticeMaterialEditText : EditText {
+class PracticeMaterialEditText : AppCompatEditText {
     constructor(context: Context?) : super(context) {
         init(context, null)
     }

@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
-import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
@@ -49,7 +48,7 @@ class ScalableImageView : View {
     private var bigScale = 1f
     private val overScale = 2.5f
     private var isBig = false
-    private var gestureDetectorCompat: GestureDetectorCompat? = null
+    private var gestureDetector: GestureDetectorCompat? = null
     private var scaleGestureDetector: ScaleGestureDetector? = null
     private var overScroller: OverScroller? = null
     var scale = 0f
@@ -60,13 +59,14 @@ class ScalableImageView : View {
 
     private fun init() {
         bitmap = BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian)
-        gestureDetectorCompat = GestureDetectorCompat(context, gestureListener)
+        gestureDetector = GestureDetectorCompat(context, gestureListener)
         scaleGestureDetector = ScaleGestureDetector(context, scaleGestureListener)
         overScroller = OverScroller(context)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
+        //为了图片居中
         originOffsetX = (width - bitmap!!.width) / 2f
         originOffsetY = (height - bitmap!!.height) / 2f
         if ((bitmap!!.width.toFloat() / bitmap!!.height) > (width.toFloat() / height)) {  //图片比较宽
@@ -84,14 +84,19 @@ class ScalableImageView : View {
         //缩放时只改了scale，offset 也需要根据缩放比例修改
         val scaleFraction = (scale - smallScale) / (bigScale - smallScale)
         canvas.translate(offsetX * scaleFraction, offsetY * scaleFraction)
+
+        //图片缩放
         canvas.scale(scale, scale, width / 2f, height / 2f)
+
+        //originOffsetX 让图片居中
         canvas.drawBitmap(bitmap!!, originOffsetX, originOffsetY, paint)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         var result = scaleGestureDetector!!.onTouchEvent(event)
+        //如果不是正在缩放
         if (!scaleGestureDetector!!.isInProgress) {
-            result = gestureDetectorCompat!!.onTouchEvent(event)
+            result = gestureDetector!!.onTouchEvent(event)
         }
         return result
     }
